@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dance Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            padding: 20px;
+        }
+        .dance-form {
+            background-color: #ffffff;
+            padding: 25px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .dance-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .dance-form label {
+            display: block;
+            margin-top: 10px;
+        }
+        .dance-form input,
+        .dance-form select,
+        .dance-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .dance-form button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #5c6bc0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .dance-form button:hover {
+            background-color: #3f51b5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dance-form">
+    <h2>Dance Registration Form</h2>
+    <form action="submit_dance_form.php" method="post">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required min="3">
+
+        <label for="style">Preferred Dance Style:</label>
+        <select id="style" name="style" required>
+            <option value="">--Select--</option>
+            <option value="Hip Hop">Hip Hop</option>
+            <option value="Ballet">Ballet</option>
+            <option value="Contemporary">Contemporary</option>
+            <option value="Salsa">Salsa</option>
+            <option value="Classical">Classical</option>
+        </select>
+
+        <label for="experience">Previous Dance Experience:</label>
+        <textarea id="experience" name="experience" rows="4" placeholder="Briefly describe..."></textarea>
+
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html>
